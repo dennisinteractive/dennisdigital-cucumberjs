@@ -1,0 +1,97 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "dennisdigital-cucumberjs@~1.0.0",
+        "scope": null,
+        "escapedName": "dennisdigital-cucumberjs",
+        "name": "dennisdigital-cucumberjs",
+        "rawSpec": "~1.0.0",
+        "spec": ">=1.0.0 <1.1.0",
+        "type": "range"
+      },
+      "/vagrant/repos/sites/theweek/tests"
+    ],
+    [
+      {
+        "raw": "dennisdigital-cucumberjs",
+        "scope": null,
+        "escapedName": "dennisdigital-cucumberjs",
+        "name": "dennisdigital-cucumberjs",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/christopher_kinch/www/repos"
+    ]
+  ],
+  "_from": "dennisdigital-cucumberjs",
+  "_inCache": true,
+  "_location": "/dennisdigital-cucumberjs",
+  "_nodeVersion": "7.9.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/dennisdigital-cucumberjs-1.0.1.tgz_1497346846874_0.4222930620890111"
+  },
+  "_npmUser": {
+    "name": "chriskinch",
+    "email": "kinchie@gmail.com"
+  },
+  "_npmVersion": "4.2.0",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "dennisdigital-cucumberjs",
+    "scope": null,
+    "escapedName": "dennisdigital-cucumberjs",
+    "name": "dennisdigital-cucumberjs",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/dennisdigital-cucumberjs/-/dennisdigital-cucumberjs-1.0.1.tgz",
+  "_shasum": "671bf97f03fd383bb87f5a8d0edb9d52a875cc3b",
+  "_shrinkwrap": null,
+  "_spec": "dennisdigital-cucumberjs",
+  "_where": "/Users/christopher_kinch/www/repos",
+  "author": "Chris Kinch <christopher_kinch@dennis.co.uk>",
+  "dependencies": {
+    "chai": "^4.0.2",
+    "chai-subset": "^1.5.0"
+  },
+  "description": "A common collection of Cucumber JS step definitions for Dennis Digital.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "671bf97f03fd383bb87f5a8d0edb9d52a875cc3b",
+    "tarball": "https://registry.npmjs.org/dennisdigital-cucumberjs/-/dennisdigital-cucumberjs-1.0.1.tgz"
+  },
+  "keywords": [
+    "CucumberJS",
+    "step",
+    "definition",
+    "BDD",
+    "testing"
+  ],
+  "license": "ISC",
+  "main": "cucumber.js",
+  "maintainers": [
+    "chriskinch <kinchie@gmail.com>"
+  ],
+  "name": "dennisdigital-cucumberjs",
+  "optionalDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dennisinteractive/dennisdigital-cucumberjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dennisinteractive/dennisdigital-cucumberjs/issues"
+  },
+  "homepage": "https://github.com/dennisinteractive/dennisdigital-cucumberjs#readme"
+}
