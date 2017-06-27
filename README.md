@@ -1,4 +1,4 @@
-# Dennis Digital: Common Step Definitions for CucumberJS
+# Dennis Digital: Common step definitions for CucumberJS
 
 A collections of common and reusable step defintions for Dennis Digital BDD testing stack. Run using CucumberJS and PhantomJS via NodeJS.
 
@@ -14,18 +14,24 @@ Your features folder should be in the same directory as you `package.json` run t
 
 `./node_modules/.bin/cucumber-js --require node_modules/dennisdigital-cucumberjs --require features`
 
+
 Alternatively you can add this as an NPM script:
 
 ```
   "scripts": {
-    "tests": "npm i && node_modules/.bin/cucumber-js --tags @node --require node_modules/dennisdigital-cucumberjs --require features"
+    "tests": "node_modules/.bin/cucumber-js --require node_modules/dennisdigital-cucumberjs --require features"
   }
 ```
 
 `npm run tests`
 
 
-The base url can also be set in your `package.json`:
+And then options can be passed like so:
+
+`npm run tests -- --tags @mytesttag`
+
+
+The base url can and should be set in your `package.json`:
 
 ```
   "options": {
@@ -38,10 +44,11 @@ Example feature:
 
 ```
 Feature: Post page
+  In order browse posts,
+  as a User,
+  I want see the post element and read the title.
 
-  Background:
-    Given I browse "http://my-app:3000/"
-
+  @posts @mytesttag
   Scenario: Go on post 1
     Given I am on "/a-site-url"
     Then I should a ".css-selector" element
