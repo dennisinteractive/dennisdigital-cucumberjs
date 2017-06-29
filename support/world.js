@@ -7,7 +7,7 @@ var {defineSupportCode} = require('cucumber');
 
 function CustomWorld() {
 	var capabilities;
-	var browser = process.env.npm_package_options_browser || 'chrome';
+	var browser = process.env.npm_package_cucumber_options_browser || 'chrome';
 
 	if (browser === 'chrome') {
 		var chromeCapabilities = seleniumWebdriver.Capabilities.chrome();
@@ -40,7 +40,9 @@ function CustomWorld() {
 		.forBrowser(browser)
 		.build();
 
-	this.driver.baseUrl = process.env.npm_package_options_baseUrl;
+	if(process.env.HOSTNAME === "centos6.vagrant.internal") {
+		this.driver.baseUrl = process.env.npm_package_cucumber_options_vm_baseUrl;
+	}
 }
 
 defineSupportCode(function({setWorldConstructor}) {
