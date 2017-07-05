@@ -8,6 +8,7 @@ var {defineSupportCode} = require('cucumber');
 function CustomWorld() {
 	var capabilities;
 	var browser = process.env.npm_package_cucumber_options_browser || 'chrome';
+	var hostname = process.env.HOSTNAME;
 
 	if (browser === 'chrome') {
 		var chromeCapabilities = seleniumWebdriver.Capabilities.chrome();
@@ -40,8 +41,17 @@ function CustomWorld() {
 		.forBrowser(browser)
 		.build();
 
-	if(process.env.HOSTNAME === "centos6.vagrant.internal") {
+	if(hostname.match("blue-qa.vpc")){
+		this.driver.baseUrl = process.env.npm_package_cucumber_options_qa_baseUrl;
+	}else if(hostname.match("blue-ci.vpc")){
+		this.driver.baseUrl = process.env.npm_package_cucumber_options_ci_baseUrl;
+	}else{
+		//centos6.vagrant.internal
 		this.driver.baseUrl = process.env.npm_package_cucumber_options_vm_baseUrl;
+	}
+
+	if(!this.driver.baseUrl) {
+		throw new Error('Base URL for "' + hostname + '" is not configured');
 	}
 }
 
