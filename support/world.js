@@ -41,12 +41,12 @@ function CustomWorld() {
 		.forBrowser(browser)
 		.build();
 
-	if(hostname.match("blue-qa.vpc")){
+	if(hostname && hostname.match("blue-qa.vpc")){
 		this.driver.baseUrl = process.env.npm_package_cucumber_options_qa_baseUrl;
-	}else if(hostname.match("blue-ci.vpc")){
+	}else if(hostname && hostname.match("blue-ci.vpc")){
 		this.driver.baseUrl = process.env.npm_package_cucumber_options_ci_baseUrl;
 	}else{
-		//centos6.vagrant.internal
+		//centos6.vagrant.internal and local
 		this.driver.baseUrl = process.env.npm_package_cucumber_options_vm_baseUrl;
 	}
 
